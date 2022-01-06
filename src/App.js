@@ -1,5 +1,5 @@
 import ExpenseItems from "./components/Expenses/ExpenseItems";
-import ExpenseForm from "./expense_form/ExpenseForm";
+import ExpenseForm from "./components/expense_form/ExpenseForm";
 import "./components/Expenses/ExpenseItems.css";
 import { useState } from "react";
 

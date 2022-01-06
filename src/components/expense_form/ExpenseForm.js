@@ -20,6 +20,11 @@ const ExpenseForm = (props) => {
 
   const expenseSubmitHandler = (event) => {
     event.preventDefault();
+
+    if (enteredTitle === "" || enteredDate === "" || enteredAmount === "") {
+      return;
+    }
+
     let expenseToAdd = {
       title: enteredTitle,
       date: new Date(enteredDate),
@@ -56,46 +61,42 @@ const ExpenseForm = (props) => {
             />
           </div>
         </div>
-        <div className="container">
+        <div>
           <div className="row">
-            <div className="col-6">
-              <div className="row">
-                <label className="col-form-label text-white">Date</label>
-                <div>
-                  <input
-                    className="rounded border-0 p-1"
-                    type="date"
-                    value={enteredDate}
-                    onChange={changeEnteredDateHandler}
-                    min="01-01-2000"
-                  ></input>
-                </div>
-              </div>
-              <div className="row">
-                <div>
-                  <label className="col-form-label text-white">Amount</label>
-                  <div>
-                    <input
-                      className="rounded border-0 p-1"
-                      type="number"
-                      onChange={changeEnteredAmountHandler}
-                      value={enteredAmount}
-                      min="0.1"
-                    ></input>
-                  </div>
-                </div>
+            <div className="col-lg-6 col-sm-12">
+              <label className="col-form-label text-white">Date</label>
+              <div>
+                <input
+                  className="rounded border-0 p-1"
+                  type="date"
+                  value={enteredDate}
+                  onChange={changeEnteredDateHandler}
+                  min="01-01-2000"
+                ></input>
               </div>
             </div>
-            <div className="col-6">
-              <div className="row">
-                <div className="text-center container ">
-                  <button type="submit" className="btn btn-info mt-4">
-                    Add Item
-                  </button>
-                </div>
+            <div className="col-lg-6 col-sm-12">
+              <label className="col-form-label text-white">Amount</label>
+              <div>
+                <input
+                  className="rounded border-0 p-1"
+                  type="number"
+                  onChange={changeEnteredAmountHandler}
+                  value={enteredAmount}
+                  min="0.1"
+                ></input>
               </div>
             </div>
           </div>
+        </div>
+        <div className="container mt-3 text-center">
+          <button
+            type="submit"
+            className="btn btn-info"
+            onClick={expenseSubmitHandler}
+          >
+            Add Item
+          </button>
         </div>
       </form>
     </div>
