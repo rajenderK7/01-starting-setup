@@ -1,0 +1,13 @@
+.expenses-box {
+  display: flex;
+  background-color: blanchedalmond;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.2rem;
+  padding: 10px;
+  margin: auto;
+  margin-top: 1rem;
+  max-width: 60%;
+  min-width: 350px;
+  border-radius: 12px;
+}
