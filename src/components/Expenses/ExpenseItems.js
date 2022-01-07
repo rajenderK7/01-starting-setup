@@ -16,7 +16,7 @@ const ExpenseItems = (props) => {
     });
   }
 
-  const noExpenseFound = <h1>No expenses found!</h1>;
+  const noExpenseFound = <h1 className="text-center">No expenses found!</h1>;
 
   return (
     <div className="container">
