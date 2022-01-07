@@ -2,6 +2,7 @@ import ExpenseItems from "./components/Expenses/ExpenseItems";
 import ExpenseForm from "./components/expense_form/ExpenseForm";
 import "./components/Expenses/ExpenseItems.css";
 import { useState } from "react";
+import Chart from "./components/chart/Chart";
 
 const initialExpenses = [
   {

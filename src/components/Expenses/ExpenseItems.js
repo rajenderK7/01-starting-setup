@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FilterYear from "../filter_component/FilterYear";
+import Chart from "../chart/Chart";
 import Expense from "./Expense";
 
 const ExpenseItems = (props) => {
@@ -20,6 +21,7 @@ const ExpenseItems = (props) => {
 
   return (
     <div className="container">
+      <Chart expenses={filteredExpenses}></Chart>
       <FilterYear
         selectedYear={currentYear}
         getFilteredYear={getFilteredYear}
