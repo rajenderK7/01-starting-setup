@@ -1,0 +1,15 @@
+.item-card {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  max-width: 350px;
+  margin: 10px;
+}
+
+.item-card > img {
+  object-fit: contain;
+  width: 100%;
+}

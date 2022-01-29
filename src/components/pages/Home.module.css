@@ -1,0 +1,29 @@
+.home {
+  display: block;
+  margin: auto;
+  max-width: 1200px;
+  /* height: 100vh; */
+  background-color: #eaeded;
+}
+
+.home-banner {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -100px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home-content-row {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (width > 1200px) {
+  .home-banner {
+    margin-bottom: -220px;
+  }
+}
